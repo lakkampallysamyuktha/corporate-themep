@@ -3,20 +3,16 @@ window.addEventListener("load", function () {
 
   // ===== HERO TEXT =====
   const text = document.getElementById("hero-text");
-
   if (text) {
     const words = text.innerText.split(" ");
     text.innerHTML = "";
-
     words.forEach((word, i) => {
       const span = document.createElement("span");
       span.textContent = word + " ";
-
       span.style.opacity = 0;
       span.style.transform = "translateY(40px)";
       span.style.filter = "blur(8px)";
       span.style.display = "inline-block";
-
       text.appendChild(span);
 
       setTimeout(() => {
@@ -33,10 +29,7 @@ window.addEventListener("load", function () {
   if (loader) {
     loader.classList.add("hide");
   }
-
 });
-
-
 // ===== SCROLL ANIMATION =====
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
