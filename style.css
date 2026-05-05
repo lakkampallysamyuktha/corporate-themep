@@ -130,7 +130,7 @@ body:not(.auth-page-body) {
 
   .navbar {
     height: 65px;
-    padding: 0 30px;   /* cleaner spacing */
+    padding: 0 30px;  
   }
 
   body:not(.auth-page-body) {
@@ -156,7 +156,7 @@ body:not(.auth-page-body) {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: #2563eb;   /* ✅ FIX */
+  color: #2563eb;   
   margin-left: auto;
 }
 /* ================= HERO PREMIUM ================= */
@@ -387,6 +387,12 @@ body:not(.auth-page-body) {
   .about-container {
     flex-direction: column;
     gap: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    background: #fff;
+
   }
 
  
@@ -428,7 +434,7 @@ body:not(.auth-page-body) {
   justify-content: space-around;
   align-items: center;
 
-  background: #020617;   /* dark blue */
+  background: #020617;   
   color: white;
 
   padding: 50px 20px;
