@@ -774,10 +774,6 @@ body:not(.auth-page-body) {
   }
 }
 
-.card, .about-grid, .stats div {
-  animation: fadeUp 0.8s ease;
-}
-
 /* ================= MOBILE ================= */
 
 /* ABOUT */
