@@ -117,7 +117,7 @@ body:not(.auth-page-body) {
   .nav-links.active {
     display: flex;
   }
-}
+
 @media (min-width: 769px) {
 
   .nav-links {
