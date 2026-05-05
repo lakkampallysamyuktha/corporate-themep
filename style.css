@@ -77,11 +77,11 @@ body:not(.auth-page-body) {
     font-size: 30px;
     color: black;
 
-    position: fixed;
+    position: absolute;   /* ✅ FIX */
     right: 20px;
     top: 15px;
 
-    z-index: 99999;
+    z-index: 10001;
   }
 
   .nav-links {
@@ -101,15 +101,18 @@ body:not(.auth-page-body) {
     z-index: 10000;
   }
 
-  .nav-links a {
-    color: white;
-    font-size: 20px;
-  }
-
   .nav-links.active {
     display: flex;
   }
+}
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
 
+  .menu-toggle {
+    display: none !important;
+  }
 }
 /* BUTTON */
 .btn {
