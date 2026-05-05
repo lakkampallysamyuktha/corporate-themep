@@ -79,3 +79,40 @@ window.addEventListener("load", function () {
     });
   }
 });
+
+////
+const counters = document.querySelectorAll(".counter");
+
+const startCounter = (counter) => {
+  const target = +counter.getAttribute("data-target");
+  const isPercent = counter.innerText.includes("%");
+
+  let count = 0;
+
+  const update = () => {
+    const increment = target / 80;
+
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.floor(count) + (isPercent ? "%" : "+");
+      requestAnimationFrame(update);
+    } else {
+      counter.innerText = target + (isPercent ? "%" : "+");
+    }
+  };
+
+  update();
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      startCounter(entry.target);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+  observer.observe(counter);
+});
