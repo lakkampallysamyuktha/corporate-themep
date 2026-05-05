@@ -76,11 +76,9 @@ body:not(.auth-page-body) {
     display: block !important;
     font-size: 30px;
     color: black;
-
-    position: absolute;   /* ✅ FIX */
+    position: absolute;
     right: 20px;
     top: 15px;
-
     z-index: 10001;
   }
 
@@ -91,20 +89,37 @@ body:not(.auth-page-body) {
     width: 100%;
     height: 100vh;
     background: #fff; 
-
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     z-index: 10000;
   }
 
   .nav-links.active {
     display: flex;
   }
+  .navbar {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  body:not(.auth-page-body) {
+    padding-top: 60px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+}
+
+  .nav-links.active {
+    display: flex;
+  }
 }
 @media (min-width: 769px) {
+
   .nav-links {
     display: flex !important;
   }
@@ -112,6 +127,20 @@ body:not(.auth-page-body) {
   .menu-toggle {
     display: none !important;
   }
+
+  .navbar {
+    height: 65px;
+    padding: 0 30px;   /* cleaner spacing */
+  }
+
+  body:not(.auth-page-body) {
+    padding-top: 65px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
 }
 /* BUTTON */
 .btn {
