@@ -80,29 +80,4 @@ window.addEventListener("load", function () {
   }
 });
 
-// Counter Animation
-const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
-  const target = +counter.getAttribute("data-target");
-  let count = 0;
-
-  const updateCount = () => {
-    const increment = target / 60;
-
-    if (count < target) {
-      count += increment;
-      counter.innerText = Math.floor(count);
-      requestAnimationFrame(updateCount);
-    } else {
-      // Final value with + or %
-      if (counter.dataset.target.includes("98")) {
-        counter.innerText = target + "%";
-      } else {
-        counter.innerText = target + "+";
-      }
-    }
-  };
-
-  updateCount();
-});
