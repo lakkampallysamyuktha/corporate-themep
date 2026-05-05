@@ -74,12 +74,15 @@ if (logo) {
 }
 
 // ===== MOBILE MENU TOGGLE =====
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav-links");
+// ===== MOBILE MENU TOGGLE =====
+window.addEventListener("load", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
 
-if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-    document.body.classList.toggle("menu-open"); // 👈 lock scroll
-  });
-}
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
+  }
+});
