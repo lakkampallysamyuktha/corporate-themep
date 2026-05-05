@@ -2,78 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>404 - Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>404 - Page Not Found</title>
 
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       background: #0f172a;
       color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
+      overflow: hidden;
     }
 
-    .box {
-      padding: 20px;
+    .container {
+      animation: fadeIn 1s ease forwards;
     }
 
     h1 {
-      font-size: 80px;
+      font-size: 90px;
       margin: 0;
+      animation: bounce 2s infinite;
     }
 
     h2 {
       margin: 10px 0;
-      font-weight: 600;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      animation-delay: 0.5s;
     }
 
     p {
-      color: #cbd5f5;
-      margin-bottom: 20px;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      animation-delay: 1s;
     }
 
-    .btn {
-      display: inline-block;
+    .btns {
+      margin-top: 20px;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    a, button {
       padding: 10px 20px;
+      margin: 5px;
       border-radius: 6px;
+      border: none;
       text-decoration: none;
       color: white;
-      margin: 5px;
-      transition: 0.3s;
-    }
-
-    .home-btn {
-      background: #ef4444;
-    }
-
-    .back-btn {
-      background: #3b82f6;
-      border: none;
       cursor: pointer;
     }
 
-    .btn:hover {
-      opacity: 0.85;
+    a {
+      background: #2563eb;
+    }
+
+    button {
+      background: #1e40af;
+    }
+
+    /* ✨ Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
+  <div class="container">
     <h1>404</h1>
     <h2>Oops! Page Not Found</h2>
     <p>This feature is not available yet.</p>
 
-    <a href="index.html" class="btn home-btn">🏠 Back to Home</a>
-    <button onclick="history.back()" class="btn back-btn">⬅ Go Back</button>
+    <div class="btns">
+      <a href="index.html">🏠 Back to Home</a>
+      <button onclick="history.back()">⬅ Go Back</button>
+    </div>
   </div>
 
 </body>
