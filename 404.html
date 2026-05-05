@@ -1,108 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Page Not Found</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0f172a;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .container {
-      animation: fadeIn 1s ease forwards;
-    }
-
-    h1 {
-      font-size: 90px;
-      margin: 0;
-      animation: bounce 2s infinite;
-    }
-
-    h2 {
-      margin: 10px 0;
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 0.5s;
-    }
-
-    p {
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 1s;
-    }
-
-    .btns {
-      margin-top: 20px;
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 1.5s;
-    }
-
-    a, button {
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 6px;
-      border: none;
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    a {
-      background: #2563eb;
-    }
-
-    button {
-      background: #1e40af;
-    }
-
-    /* ✨ Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#0f172a; color:white; text-align:center;">
 
-  <div class="container">
-    <h1>404</h1>
+  <div>
+    <h1 style="font-size:80px;">404</h1>
     <h2>Oops! Page Not Found</h2>
     <p>This feature is not available yet.</p>
 
-    <div class="btns">
-      <a href="index.html">🏠 Back to Home</a>
-      <button onclick="history.back()">⬅ Go Back</button>
-    </div>
-  </div>
+    <br>
 
+    <a href="index.html" style="padding:10px 20px; background:red; color:white; border-radius:6px; text-decoration:none;">🏠 Back to Home</a>
+    
+    <button onclick="history.back()" style="padding:10px 20px; margin-left:10px; background:blue; color:white; border:none; border-radius:6px;">
+      ⬅ Go Back
+    </button>
+  </div>
 </body>
 </html>
