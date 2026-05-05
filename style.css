@@ -75,7 +75,7 @@ body:not(.auth-page-body) {
   .menu-toggle {
     display: block !important;
     font-size: 30px;
-    color: black;
+    color: white;
 
     position: absolute;   /* ✅ FIX */
     right: 20px;
