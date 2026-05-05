@@ -78,7 +78,7 @@ body:not(.auth-page-body) {
     display: block;
     font-size: 28px;
     cursor: pointer;
-    color: #111;
+    color: #000;
     margin-left: auto;
     z-index: 10001;
   }
@@ -122,7 +122,7 @@ body:not(.auth-page-body) {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: #111;
+  color: #2563eb;   /* ✅ FIX */
   margin-left: auto;
 }
 /* ================= HERO PREMIUM ================= */
