@@ -42,7 +42,7 @@ body:not(.auth-page-body) {
 }
 .nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #ffffff !important; 
 }
 .nav-links a:hover {
   text-decoration: none;   
