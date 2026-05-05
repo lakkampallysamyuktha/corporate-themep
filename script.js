@@ -80,39 +80,29 @@ window.addEventListener("load", function () {
   }
 });
 
-////
+// Counter Animation
 const counters = document.querySelectorAll(".counter");
 
-const startCounter = (counter) => {
+counters.forEach(counter => {
   const target = +counter.getAttribute("data-target");
-  const isPercent = counter.innerText.includes("%");
-
   let count = 0;
 
-  const update = () => {
-    const increment = target / 80;
+  const updateCount = () => {
+    const increment = target / 60;
 
     if (count < target) {
       count += increment;
-      counter.innerText = Math.floor(count) + (isPercent ? "%" : "+");
-      requestAnimationFrame(update);
+      counter.innerText = Math.floor(count);
+      requestAnimationFrame(updateCount);
     } else {
-      counter.innerText = target + (isPercent ? "%" : "+");
+      // Final value with + or %
+      if (counter.dataset.target.includes("98")) {
+        counter.innerText = target + "%";
+      } else {
+        counter.innerText = target + "+";
+      }
     }
   };
 
-  update();
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      startCounter(entry.target);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-counters.forEach(counter => {
-  observer.observe(counter);
+  updateCount();
 });
