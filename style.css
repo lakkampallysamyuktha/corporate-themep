@@ -73,17 +73,18 @@ body:not(.auth-page-body) {
 @media (max-width: 768px) {
 
   .menu-toggle {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    color: #000;
+    display: block !important;   
+    font-size: 30px;
+    color: black;
 
     position: absolute;
     right: 20px;
     top: 15px;
 
-    z-index: 10001;
+    z-index: 99999;  
   }
+
+}
 
   .nav-links {
     display: none;
