@@ -121,9 +121,22 @@ body:not(.auth-page-body) {
 /* HAMBURGER */
 .menu-toggle {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  color: #111;  
+  color: #111;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #111;
+
+    margin-left: auto;   /* ✅ FIX */
+    z-index: 10001;
+  }
 }
 /* ================= HERO PREMIUM ================= */
 /* ===== HERO FINAL UPGRADE ===== */
